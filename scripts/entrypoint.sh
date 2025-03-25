@@ -68,8 +68,8 @@ fi
 exec qemu-system-x86_64 \
    -serial mon:stdio \
    -nographic \
-   -m 512 \
-   -smp 4,sockets=1,cores=4,threads=1 \
+   -m 128 \
+   -smp 1,sockets=1,cores=1,threads=1 \
    -cpu host$CPU_FEATURES \
    $KVM_OPTS \
    -nic tap,id=qemu1,mac=54:05:AB:CD:12:31,script=$QEMU_IFUP,downscript=$QEMU_IFDOWN \
